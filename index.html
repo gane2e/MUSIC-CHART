@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+
+    <div class="cont_wrap">
+        <div class="top_header">
+            <ul>
+                <li class="nav_menu" data-menu="">멜론차트</li>
+                <li class="nav_menu" data-menu="">최신음악</li>
+                <li class="nav_menu" data-menu="">장르음악</li>
+                <li class="nav_menu" data-menu="">멜론DJ</li>
+                <li class="nav_menu" data-menu="">멜론TV</li>
+                <li class="nav_menu" data-menu="">스타포스트</li>
+                <li class="nav_menu" data-menu="">매거진</li>
+                <li class="nav_menu" data-menu="">뮤직어워드</li>
+                <li class="nav_menu" data-menu="">뮤직웨이브</li>
+                <li class="nav_menu" data-menu="">마이뮤직</li>
+            </ul>
+        </div>
+        <div class="page_header">
+            <span class="page_title_imdb">imdb</span>  
+            <span class="page_title">음원현황</span>
+        </div>
+
+        <div class="cont_section">
+            <div class="page_conts">
+                <div class="song_list">
+                    <div class="select_container">
+                        <input type="text" class="search_input" id="search_input">
+                        <select id="sort_order" class="sort_order">
+                          <option value="asc">오름차순 정렬</option>
+                          <option value="desc">내림차순 정렬</option>
+                        </select>
+                    </div>
+                    <table  style="width: 100%;">
+                        <colgroup>
+                            <col style="width: 10%;">
+                            <col style="width: 45%;">
+                            <col style="width: 15%;">
+                            <col style="width: 15%;">
+                            <col style="width: 15%;">
+                        </colgroup>
+                    <thead>
+                        <th>No</th>
+                        <th>곡정보</th>
+                        <th>앨범</th>
+                        <th>재생시간</th>
+                        <th>발매일자</th>
+                    </thead>
+                    <tbody id="song_list_tbody">
+                        <!-- node생성부분 START -->
+                        <tr>
+                            <td class="td_No">1</td>
+                            <td class="td_Track">
+                                <img src="img/866-200x300.jpg" class="albumImg">
+                                <div class="td_track_cont">
+                                    <div class="track">TOO BAD</div>
+                                    <div class="artist">G-DRAGON</div>
+                                </div>
+                            </td>
+                            <td class="album">Übermensch</td>
+                            <td class="td_Duration">
+                                <img src="img/play.png" class="playImg" >
+                                <span class="duration">1:30</span>
+                            </td>
+                            <td class="td_Release_date">2024-01-01</td>
+                        </tr>
+                        <!-- node생성부분 END -->
+                    </tbody>
+                    </table>
+                    
+                </div>
+
+                <div style="display: none;" id="no_result_message" class="no_result_message">
+                    <div class="no_result_img_box">
+                        <img src="img/no_result.png" class="no_result_img">
+                    </div>
+                    <div class="no_result_txt">일치하는 검색결과가 없습니다.</div>
+                </div>
+
+                <div class="pagenation_container" id="pagenation_container">
+                    <!-- `<button>${i}</button>` -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
